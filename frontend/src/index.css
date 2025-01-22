@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #FF4B6E 0%, #FF758C 100%);
+}
+
+.feature-icon {
+  @apply w-12 h-12 text-[#FF4B6E];
+}
+
+.testimonial-card {
+  @apply relative p-6 bg-white rounded-2xl shadow-lg border border-gray-100;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FF4B6E 0%, #FF758C 100%);
+  border-radius: 2xl 2xl 0 0;
+}
+
+.hero-text {
+  @apply text-[72px] leading-[1.1] font-bold;
+}
+
+.hero-card {
+  @apply bg-[#FF4B6E] rounded-[32px] overflow-hidden p-12 text-white;
+}
+
+.social-proof-bar {
+  @apply flex items-center justify-center gap-8 mt-12 py-4 border-t border-b border-gray-200;
+}
+
+.social-proof-logo {
+  @apply h-8 opacity-50 hover:opacity-100 transition-opacity;
+}
